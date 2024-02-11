@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/webapp_
+3_1.xsd">
+<servlet>
+<servlet-name>ClientiController</servlet-name>
+<servlet-class>Controller.ClientiController</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>ConstructoriController</servlet-name>
+<servlet-class>Controller.ConstructoriController</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>LucrareController</servlet-name>
+<servlet-class>Controller.LucrareController</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>ClientiController</servlet-name>
+<url-pattern>/ClientiController</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>ConstructoriController</servlet-name>
+<url-pattern>/ConstructoriController</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>LucrareController</servlet-name>
+<url-pattern>/LucrareController</url-pattern>
+</servlet-mapping>
+<session-config>
+<session-timeout>
+30
+</session-timeout>
+</session-config>
+<welcome-file-list>
+<welcome-file>Clienti.jsp</welcome-file>
+</welcome-file-list>
+</web-app>

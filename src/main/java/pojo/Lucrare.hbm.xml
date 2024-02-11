@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="pojo.Lucrare" table="lucrare" catalog="pibd" optimistic-lock="version">
+<id name="idlucrare" type="java.lang.Integer">
+<column name="idlucrare" />
+<generator class="identity" />
+</id>
+<many-to-one name="constructori" class="pojo.Constructori" fetch="select">
+<column name="idconstructor" />
+</many-to-one>
+<many-to-one name="clienti" class="pojo.Clienti" fetch="select">
+<column name="idclient" />
+</many-to-one>
+<property name="dataInceput" type="date">
+<column name="datainceput" length="10" />
+</property>
+<property name="pret" type="float">
+<column name="pret" length="45" />
+</property>
+<property name="durataZile" type="java.lang.Integer">
+<column name="durataZile" length="45" />
+</property>
+</class>
+</hibernate-mapping>

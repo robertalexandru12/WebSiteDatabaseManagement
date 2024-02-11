@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="pojo.Clienti" table="clienti" catalog="pibd" optimistic-lock="version">
+<id name="idclient" type="java.lang.Integer">
+<column name="idclient" />
+<generator class="identity" />
+</id>
+<property name="nume" type="string">
+<column name="nume" length="45" />
+</property>
+<property name="prenume" type="string">
+<column name="prenume" length="45" />
+</property>
+<property name="adresa" type="string">
+<column name="adresa" length="45" />
+</property>
+<property name="buget" type="float">
+<column name="buget" length="45" />
+</property>
+<set name="lucrari" table="lucrare" inverse="true" lazy="true" fetch="select">
+<key>
+<column name="idclient" />
+</key>
+<one-to-many class="pojo.Lucrare" />
+</set>
+</class>
+</hibernate-mapping>
