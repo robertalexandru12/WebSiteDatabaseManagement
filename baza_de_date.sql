@@ -39,7 +39,7 @@ CREATE TABLE `clienti` (
 
 LOCK TABLES `clienti` WRITE;
 /*!40000 ALTER TABLE `clienti` DISABLE KEYS */;
-INSERT INTO `clienti` VALUES (113,'Popa','Catalina','Dragasani, Valcea',1500),(114,'Florin','POP','jud Constanta',5900),(115,'Biris','Robert','Tg Jiu, jud Gor',1000),(116,'Biris','Robert-Alexandru','Bucuresti',2222);
+INSERT INTO `clienti` VALUES (113,'Popa','Florin','Dragasani, Valcea',1500),(114,'Florin','POP','jud Constanta',5900),(115,'Popescu','Andrei','Tg Jiu, jud Gor',1000),(116,'Manea','George','Bucuresti',2222);
 /*!40000 ALTER TABLE `clienti` ENABLE KEYS */;
 UNLOCK TABLES;
 
